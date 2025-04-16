@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora's Personal Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #E3E1EC;
+      color: #585858;
+    }
+
+    header {
+      background-color: #CDC9E8;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #CDC9E8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: #585858;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+    }
+
+    .menu-icon.active .bar1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active .bar2 {
+      opacity: 0;
+    }
+
+    .menu-icon.active .bar3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      background-color: #CDC9E8;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #585858;
+      white-space: nowrap;
+    }
+
+    .dropdown a:hover {
+      background-color: #D4D2E9;
+    }
+
+    .box {
+      background-color: #D4D2E9;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .box-content {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Aurora’s Personal Profile</div>
+    <div class="menu-icon" onclick="toggleDropdown()" id="menuIcon">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+  <div class="dropdown" id="dropdownMenu">
+    <a href="#" onclick="showHome()">首頁</a>
+    <a href="#" onclick="showProfile()">個人簡介</a>
+    <a href="#">興趣何倫碼測驗結果</a>
+    <a href="#">MIS相關工作分析</a>
+    <a href="https://www.pu.edu.tw/" target="_blank">靜宜大學</a>
+    <a href="https://csim.pu.edu.tw/" target="_blank">靜宜大學資訊管理學系</a>
+  </div>
+
+  <div id="main-content"></div>
+
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById("dropdownMenu");
+      const icon = document.getElementById("menuIcon");
+      const isVisible = menu.style.display === "block";
+      menu.style.display = isVisible ? "none" : "block";
+      icon.classList.toggle("active", !isVisible);
+    }
+
+    function showHome() {
+      document.getElementById("main-content").innerHTML = "";
+    }
+
+    function showProfile() {
+      document.getElementById("main-content").innerHTML = `
+        <div class="box">
+          <img src="myphoto.jpg" alt="你的照片">
+          <div class="box-content">
+            <h2>基本資料</h2>
+            <p>姓名：陳琬昀</p>
+            <p>就讀學校：靜宜大學</p>
+            <p>就讀學系：資訊管理系</p>
+            <p>學號：411203275</p>
+            <p>聯絡信箱：ari.aurora.03@gmail.com</p>
+          </div>
+        </div>
+        <div class="box">
+          <h2>個人經歷</h2>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
