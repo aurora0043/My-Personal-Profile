@@ -81,14 +81,13 @@
       margin: 20px;
       padding: 20px;
       border-radius: 8px;
-      display: flex;
-      flex-wrap: wrap;
     }
 
     .box img {
       width: 150px;
-      height: 150px;
+      height: 200px;
       object-fit: cover;
+      border-radius: 12px;
       margin-right: 20px;
     }
 
@@ -99,9 +98,13 @@
 
     h2 {
       font-weight: bold;
+      text-align: center;
     }
 
-    /* Welcome Typing */
+    h3 {
+      font-weight: bold;
+    }
+
     .welcome {
       font-size: 24px;
       margin: 40px auto 10px auto;
@@ -149,6 +152,32 @@
     .card:hover {
       transform: translateY(-5px);
     }
+
+    .indent {
+      text-indent: 2em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #CDC9E8;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #A39FCC;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+
+    button:hover {
+      background-color: #8E89B3;
+    }
   </style>
 </head>
 <body>
@@ -163,7 +192,7 @@
   <div class="dropdown" id="dropdownMenu">
     <a href="#" onclick="showHome()">首頁</a>
     <a href="#" onclick="showProfile()">個人簡介</a>
-    <a href="#">興趣何倫碼測驗結果</a>
+    <a href="#" onclick="showHolland()">興趣何倫碼測驗結果</a>
     <a href="#">MIS相關工作分析</a>
     <a href="https://www.pu.edu.tw/" target="_blank">靜宜大學</a>
     <a href="https://csim.pu.edu.tw/" target="_blank">靜宜大學資訊管理學系</a>
@@ -175,12 +204,16 @@
     <div class="card-grid">
       <div class="card" onclick="showHome()">🏠 首頁總覽</div>
       <div class="card" onclick="showProfile()">👤 個人簡介</div>
-      <div class="card">🧭 興趣測驗結果</div>
+      <div class="card" onclick="showHolland()">🧭 興趣測驗結果</div>
       <div class="card">💼 MIS相關分析</div>
       <div class="card" onclick="window.open('https://www.pu.edu.tw/', '_blank')">🏫 靜宜大學</div>
       <div class="card" onclick="window.open('https://csim.pu.edu.tw/', '_blank')">💻 資訊管理學系</div>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Aurora's Personal Page. All rights reserved.
+  </footer>
 
   <script>
     function toggleDropdown() {
@@ -192,23 +225,12 @@
     }
 
     function showHome() {
-      document.getElementById("main-content").innerHTML = `
-        <div class="welcome">Welcome to Aurora’s world ✨</div>
-        <div class="quote">Our fate lives within us, you only have to be brave enough to see it.</div>
-        <div class="card-grid">
-          <div class="card" onclick="showHome()">🏠 首頁總覽</div>
-          <div class="card" onclick="showProfile()">👤 個人簡介</div>
-          <div class="card">🧭 興趣測驗結果</div>
-          <div class="card">💼 MIS相關分析</div>
-          <div class="card" onclick="window.open('https://www.pu.edu.tw/', '_blank')">🏫 靜宜大學</div>
-          <div class="card" onclick="window.open('https://csim.pu.edu.tw/', '_blank')">💻 資訊管理學系</div>
-        </div>
-      `;
+      location.reload();
     }
 
     function showProfile() {
       document.getElementById("main-content").innerHTML = `
-        <div class="box">
+        <div class="box" style="display: flex; flex-wrap: wrap;">
           <img src="me.jpg" alt="你的照片">
           <div class="box-content">
             <h2>基本資料</h2>
@@ -221,8 +243,59 @@
         </div>
         <div class="box">
           <h2>個人經歷</h2>
+        </div>`;
+    }
+
+    function showHolland() {
+      document.getElementById("main-content").innerHTML = `
+        <div class="box">
+          <h2>About Holland Code</h2>
+          <p>何倫碼（Holland Code）是根據每個人先天個性來幫助進行職業選擇的理論，由心理學家約翰·何倫（John Lewis Holland）建立。他歸類了六種不同的興趣類型——實做型（Realistic）、研究型（Investigative）、藝術型（Artistic）、社會型（Social）、企業型（Enterprising）和事務型（Conventional）。</p>
+          <p>人們不只屬於一種類型，會是數種類型的組合，這些興趣特質互相搭配，能讓人發揮潛能。</p>
         </div>
-      `;
+        <div class="box">
+          <h2>我的何倫碼為：S & A</h2>
+          <img src="holland.jpg" style="width:150px; height:200px; display:block; margin:10px auto; border-radius: 12px;">
+        </div>
+        <div class="box">
+          <h2>S 社會型</h2>
+          <h3>▪︎ 特質：</h3>
+          <p class="indent">．社會型的人以熱情和友好的性格著稱，是個常常尋求能夠對他人生活產生正面影響的角色。</p>
+          <h3>▪︎ 在職場中的優勢：</h3>
+          <p class="indent">．社會型的一大優勢是出色的人際交往技巧，能夠建立堅固的關係、促進溝通並促使團隊合作。社交型的人在以人為本、注重服務的環境中表現優異。他們的同理心讓他們能夠與他人深入連接，使他們在教師、輔導員或醫療服務提供者等角色中特別有效，因為了解和滿足個體的需求在這些工作中至關重要。</p>
+          <p class="indent">．社會型的另一個重要的優勢是他們天生就能激力與啟發他人。這種領導和激勵的能力使他們非常適合在非營利組織、教育部門的領導角色以及任何需要召集人們朝共同目標努力的領域工作。此外，他們強大的口頭溝通技巧讓他們能夠成為有效的發言人和倡導者，能夠清晰地表達信息並激勵多元化的群體。</p>
+          <h3>▪︎ 面臨的挑戰：</h3>
+          <p class="indent">．社會型是以幫助他人為中心的角色情感需求量大，如果不進行適當的自我照顧，可能會導致同情疲勞和職業倦怠。社交型的人需要確保保持健康的工作生活平衡，並在需要時尋求支持，以持續他們的關懷能力。</p>
+          <p class="indent">．社會型的人可能在高度競爭、官僚主義或以盈利為導向的環境中掙扎，這些環境可能與他們的價值觀不符。他們在以人的福祉而非金錢收益為重的環境中茁壯成長。因此，他們通常需要精挑細選與自己價值觀相契合的雇主。</p>
+        </div>
+        <div class="box">
+          <h2>A 藝術型</h2>
+          <h3>▪︎ 特質：</h3>
+          <p class="indent">．藝術型人格以創造力、表達力和偏好原創性任務為顯著特徵。他們有獨特的能力通過不同的視角看世界，將別人眼中平凡或沒注意到的經歷跟經驗表達出來，轉化成有價值的產品。</p>
+          <h3>▪︎在職場中的優勢：</h3>
+          <p class="indent">．藝術型的人天生擅長跳脫傳統思維，帶來新視角。他們看待世界的獨特方式和能力使他們成為任何創意團隊中的關鍵人物，因為原創性和才華是成功的必要條件。</p>
+          <h3>▪︎ 面臨的挑戰：</h3>
+          <p class="indent">．藝術跟設計工作的主觀性及回報的高波動，可能導致工作機會和收入的不穩定，特別是對於自由職業者或個人工作室而言。這類工作也因為有趣自由，所以競爭性非常高，需要不斷自我提升和適應新趨勢才能做的久。</p>
+          <p class="indent">．另一個挑戰是主動經營客戶或社群關係，持續自我推廣和建立人脈的需求，對於個性內向或想要專注於創作的人來說，會是艱巨的任務。為了克服這些障礙，藝術型的人需要找出一種平衡，＂他們想做的＂跟＂市場實際需求的＂這兩者之間是否有共通之處，如此一來他們才能得到應有的金錢回報。所以，學習建立人脈、社群、自我推廣跟銷售，是藝術型人將創意才能轉化為長久職業的必要步驟。</p>
+        </div>
+        <div class="box">
+          <h2>S 社會型 & A 藝術型 適合的職業：</h2>
+          <ul>
+            <li>導演、導播</li>
+            <li>心理學研究人員</li>
+            <li>記者、採編</li>
+            <li>節目製作人員</li>
+            <li>學校教師</li>
+            <li>文編、校對、文字工作者</li>
+            <li>美術老師</li>
+            <li>英文翻譯、口譯人員</li>
+            <li>行銷企劃人員</li>
+            <li>廣告AE業務人員</li>
+          </ul>
+        </div>
+        <div class="box">
+          <button onclick="window.open('https://guide.104.com.tw/interest/', '_blank')">🔍 點我測驗你的何倫碼</button>
+        </div>`;
     }
   </script>
 </body>
