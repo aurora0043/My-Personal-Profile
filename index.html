@@ -236,7 +236,7 @@
     <a href="#" onclick="showHome(); closeDropdown()">首頁</a>
     <a href="#" onclick="showProfile(); closeDropdown()">個人簡介</a>
     <a href="#" onclick="showHolland(); closeDropdown()">興趣何倫碼測驗結果</a>
-    <a href="#" onclick="closeDropdown()">MIS相關工作分析</a>
+    <a href="#" onclick="showMISJob(); closeDropdown()">MIS相關工作分析</a>
     <a href="https://www.pu.edu.tw/" target="_blank" onclick="closeDropdown()">靜宜大學</a>
     <a href="https://csim.pu.edu.tw/" target="_blank" onclick="closeDropdown()">靜宜大學資訊管理學系</a>
   </div>
@@ -249,7 +249,7 @@
       <div class="card" onclick="showHome()">🏠 首頁總覽</div>
       <div class="card" onclick="showProfile()">👤 個人簡介</div>
       <div class="card" onclick="showHolland()">🧭 興趣測驗結果</div>
-      <div class="card">💼 MIS相關分析</div>
+      <div class="card" onclick="showMISJob()">💼 MIS相關分析</div>
       <div class="card" onclick="window.open('https://www.pu.edu.tw/', '_blank')">🏫 靜宜大學</div>
       <div class="card" onclick="window.open('https://csim.pu.edu.tw/', '_blank')">💻 資訊管理學系</div>
     </div>
@@ -398,6 +398,42 @@
         });
       }
     }
+
+    function showMISJob() {
+      document.getElementById("main-content").innerHTML = `
+        <div class="box">
+          <h2>系統分析師</h2>
+          <h3>工作內容：</h3>
+          <li class="indent">負責資訊系統需求訪談、系統規劃設計及規格文件撰寫。 </li>
+          <li class="indent">協助軟體開發工程師，確保軟體功能符合規格要求。 </li>
+          <li class="indent">協助系統測試、上線規劃與輔導。  </li>
+          <h3>條件要求：</h3>
+          <li class="indent">工作經歷：不拘</li>
+          <li class="indent">學歷要求：專科以上</li>
+          <li class="indent">科系要求：不拘</li>
+          <li class="indent">語文條件：不拘</li>
+          <li class="indent">擅長工具：PL/SQL</li>
+          <li class="indent">工作技能：系統架構規劃、系統整合分析</li>
+          <h3>加分項目：</h3>
+          <li class="indent">良好的對內/對外溝通、團隊合作、獨立作業及解決問題的能力</li>
+          <li class="indent">具備系統分析文件之撰寫經驗</li>
+          <li class="indent">具金融產業相關經驗者佳</li>
+          <button onclick="window.open('https://www.104.com.tw/job/8kcen?jobsource=index_s', '_blank')">🔍 點我查看詳細資訊</button>
+        </div>
+        
+        <div class="box">
+          <h2>自我優勢分析</h2>
+          <h3>具備資訊系統分析相關背景與訓練：</h3>
+          <p class="indent">我的學術訓練與過往專案經驗中，曾接觸過資料庫設計、系統建模與流程分析，熟悉 ER 模型與關聯式資料庫架構，具備將需求轉換為技術規格的能力。</p>
+          <h3>熟悉 PL/SQL，具邏輯與資料處理能力：</h3>
+          <p class="indent">在過去的實作中，我使用 PL/SQL 撰寫過資料查詢與處理腳本，熟悉 SQL 語法與資料操作邏輯，能理解系統如何與資料庫互動。</p>
+          <h3>擅長文件撰寫與跨部門溝通：</h3>
+          <p class="indent">我喜歡把複雜的事情用條理清楚的方式說明，無論是技術文件、系統規格還是需求訪談紀錄，我都有良好經驗，也能協助不同部門之間溝通。</p>
+          <h3>學習能力強、具獨立作業與合作能力：</h3>
+          <p class="indent">無論是獨立完成任務或與團隊配合，我都能迅速適應。遇到新技術也能快速學習與應用，具備解決問題的彈性與耐心。</p>
+          <p class="indent"></p>
+        </div>
+    `}
   </script>
 </body>
 </html>
