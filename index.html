@@ -262,7 +262,7 @@
 
 
   <dialog id="imgDialog" onclick="this.close()">
-    <img src="public/holland.JPG" alt="holland 大圖">
+    <img src="holland.JPG" alt="holland 大圖">
   </dialog>
 
 
@@ -286,12 +286,6 @@
       location.reload();
     }
 
-    function openImageDialog(src) {
-    const dialog = document.getElementById('imgDialog');
-    const dialogImg = dialog.querySelector('img');
-    dialogImg.src = src;
-    dialog.showModal();
-  }
 
     function showProfile() {
       document.getElementById("main-content").innerHTML = `
@@ -356,7 +350,7 @@
         </div>
         <div class="box">
           <h2>我的何倫碼為：S 社會型 & A 藝術型</h2>
-          <img src="public/holland.JPG" style="width:150px; height:200px; display:block; margin:10px auto; border-radius: 12px; cursor: pointer;" onclick="openImageDialog(this.src)">
+          <img src="holland.JPG" style="width:150px; height:200px; display:block; margin:10px auto; border-radius: 12px;">
         </div>
         <div class="box">
           <h2>S 社會型</h2>
