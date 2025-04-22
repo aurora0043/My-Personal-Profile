@@ -155,7 +155,7 @@
     }
 
     .indent {
-      text-indent: 2em;
+      margin-left:2em;
     }
 
     footer {
@@ -215,13 +215,13 @@
   </div>
 
   <div id="main-content">
-    <div class="welcome">Welcome to Aurora’s Personal Profile ✨</div>
+    <div class="welcome">Welcome to My Personal Profile✨</div>
     <div class="quote">Our fate lives within us, you only have to be brave enough to see it.</div>
     <div class="card-grid">
       <div class="card" onclick="showHome()">🏠 首頁總覽</div>
       <div class="card" onclick="showProfile()">👤 個人簡介</div>
       <div class="card" onclick="showHolland()">🧭 興趣測驗結果</div>
-      <div class="card">💼 MIS相關分析</div>
+      <div class="card">💼 MIS工作分析</div>
       <div class="card" onclick="window.open('https://www.pu.edu.tw/', '_blank')">🏫 靜宜大學</div>
       <div class="card" onclick="window.open('https://csim.pu.edu.tw/', '_blank')">💻 資訊管理學系</div>
     </div>
@@ -256,7 +256,7 @@
     function showProfile() {
       document.getElementById("main-content").innerHTML = `
         <div class="box" style="display: flex; flex-wrap: wrap;">
-          <img src="me.jpg" alt="你的照片">
+          <img src="/public/me.JPG" alt="你的照片">
           <div class="box-content">
             <h2>基本資料</h2>
             <p>姓名：陳琬昀</p>
@@ -314,7 +314,7 @@
         </div>
         <div class="box">
           <h2>我的何倫碼為：S 社會型 & A 藝術型</h2>
-          <img src="holland.jpg" style="width:150px; height:200px; display:block; margin:10px auto; border-radius: 12px;">
+          <img src="/public/holland.JPG" style="width:150px; height:200px; display:block; margin:10px auto; border-radius: 12px;">
         </div>
         <div class="box">
           <h2>S 社會型</h2>
@@ -355,7 +355,7 @@
         <div>
           <button onclick="window.open('https://guide.104.com.tw/interest/', '_blank')">🔍 點我測驗你的何倫碼</button>
         </div>`
-      const img = document.querySelector('img[src="holland.jpg"]');
+      const img = document.querySelector('img[src="holland.JPG"]');
       if (img) {
         img.addEventListener("click", () => {
           document.getElementById("imgDialog").showModal();
