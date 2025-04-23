@@ -126,7 +126,8 @@
 
 
     .welcome {
-      font-size: 18px;
+      font-size: 26px;
+      font-weight: bold;
       font-family: 'Patrick Hand', cursive;
       margin: 40px auto 10px auto;
       text-align: center;
@@ -150,12 +151,19 @@
 
 
     .quote {
-      margin: 10px 20px 30px 20px;
-      font-style: italic;
+      margin: 0px 20px 40px 20px;
+      font-family: 'Patrick Hand', cursive;
       text-align: center;
       font-size: 18px;
     }
 
+    .highlight-text {
+      background-color: #F3D3D8;
+      font-weight: bold;
+      padding: 0.1em 0.2em;
+      border-radius: 0.2em;
+      box-decoration-break: clone;
+    }
 
     .card-grid {
       display: grid;
@@ -248,7 +256,8 @@
 
 
   <div id="main-content">
-    <div class="welcome">Our fate lives within us,you only have to be brave enough to see it✨</div>
+    <div class="welcome">Welcome to My Personal Profile✨</div>
+    <div class="quote">Our fate lives within us, you only have to be brave enough to see it.</div>
     <div class="card-grid">
       <div class="card" onclick="showHome()">🏠 首頁總覽</div>
       <div class="card" onclick="showProfile()">👤 個人簡介</div>
@@ -307,11 +316,13 @@
         <div class="box">
           <h2>About Me☁️</h2>
           <h3>自我介紹：</h3>
+          <p class="indent">我是一個<span class="highlight-text">對世界充滿好奇</span>、<span class="highlight-text">熱愛觀察細節</span>的人。比起走在別人鋪好的道路上，我更喜歡探索那些還沒被命名的小路，從中找到屬於自己的節奏與方向。我相信問題背後總有更深的線索，而答案，往往藏在那些被忽略的小地方。</p>
+          <p class="indent">生活中我喜歡涉略各種不同領域，從設計、寫作到各式各樣技術，每一項學習都是我認識自己、理解世界的方式。比起擁有標準答案，<span class="highlight-text">我更享受思考的過程，因為那裡才有真正的成長。</span></p>
           <h3>個人特質：</h3>
-          <li>善於傾聽，能統整大家的想法與意見</li>
-          <li>擁有豐富的想像力與創造力，能在解決問題時提供新穎的想法</li>
-          <li>擁有敏銳的觀察力，能發現許多人不曾發現過的問題</li>
-          <li>擅長共情他人，能站在對方的角度看待事情</li>
+          <li><b>善於傾聽</b>，能統整大家的想法與意見</li>
+          <li>擁有<b>豐富的想像力與創造力</b>，能在解決問題時提供新穎的想法</li>
+          <li>擁有<b>敏銳的觀察力</b>，能發現許多人不曾發現過的問題</li>
+          <li>擅長共情他人，<b>能站在對方的角度</b>看待事情</li>
           <h3>愛好：</h3>
           <li>嘗試各種平面設計，例如：字體設計、海報設計</li>
           <li>手工</li>
@@ -320,12 +331,14 @@
           <li>看電影</li>
           <h3>技能：</h3>
           <li>程式語言，例如：Java、Python、HTML、CSS、C語言</li>
+          <li>ERP系統基本模組運作及流程</li>
+          <li>基礎資料庫模型設計與建置</li>
           <li>擅長PS、AI等編輯工具</li>
         </div>
         <div class="box">
           <h2>個人經歷📇</h2>
-          <p>於2025年2月投稿大專生研究企劃書</p>
-          <p>於2025年4月~6月參加台灣經貿網跨境電商行銷成長營</p>
+          <p>於2025年2月投稿<span class="highlight-text">大專生研究企劃書</span></p>
+          <p>於2025年4月~6月參加<span class="highlight-text">台灣經貿網跨境電商行銷成長營</span></p>
         </div>
         <div class="box">
           <h2>未來規劃✈️</h2>
@@ -335,7 +348,7 @@
           <li>通過ERP認證考試</li>
           <h3>中期：</h3>
           <li>考取雅思或托福</li>
-          <li>到國外交換</li>
+          <li>出國留學</li>
           <li>準備研究所考試</li>
           <h3>長期：</h3>
           <li>找到適合自己的工作</li>
@@ -352,7 +365,7 @@
         <div class="box">
           <h2>About Holland Code💡</h2>
           <p>何倫碼（Holland Code）是根據每個人先天個性來幫助進行職業選擇的理論，由心理學家約翰·何倫（John Lewis Holland）建立。他歸類了六種不同的興趣類型——實做型（Realistic）、研究型（Investigative）、藝術型（Artistic）、社會型（Social）、企業型（Enterprising）和事務型（Conventional）。</p>
-          <p>人們不只屬於一種類型，會是數種類型的組合，這些興趣特質互相搭配，能讓人發揮潛能。</p>
+          <p><b>人們不只屬於一種類型，會是數種類型的組合，這些興趣特質互相搭配，能讓人發揮潛能。<b></p>
         </div>
         <div class="box">
           <h2>我屬於S 社會型🖇️ & A 藝術型🩰</h2>
@@ -363,10 +376,10 @@
           <h3>▪︎ 特質：</h3>
           <li class="indent">社會型的人以熱情和友好的性格著稱，是個常常尋求能夠對他人生活產生正面影響的角色。</li>
           <h3>▪︎ 在職場中的優勢：</h3>
-          <li class="indent">社會型的一大優勢是出色的人際交往技巧，能夠建立堅固的關係、促進溝通並促使團隊合作。社交型的人在以人為本、注重服務的環境中表現優異。他們的同理心讓他們能夠與他人深入連接，使他們在教師、輔導員或醫療服務提供者等角色中特別有效，因為了解和滿足個體的需求在這些工作中至關重要。</li>
-          <li class="indent">社會型的另一個重要的優勢是他們天生就能激力與啟發他人。這種領導和激勵的能力使他們非常適合在非營利組織、教育部門的領導角色以及任何需要召集人們朝共同目標努力的領域工作。此外，他們強大的口頭溝通技巧讓他們能夠成為有效的發言人和倡導者，能夠清晰地表達信息並激勵多元化的群體。</li>
+          <li class="indent">社會型的一大優勢是出色的人際交往技巧，<span class="highlight-text">能夠建立堅固的關係、促進溝通並促使團隊合作。</span>社交型的人在以人為本、注重服務的環境中表現優異。他們的同理心讓他們能夠與他人深入連接，使他們在教師、輔導員或醫療服務提供者等角色中特別有效，因為了解和滿足個體的需求在這些工作中至關重要。</li>
+          <li class="indent">社會型的另一個重要的優勢是他們<span class="highlight-text">天生就能激力與啟發他人。</span>這種領導和激勵的能力使他們非常適合在非營利組織、教育部門的領導角色以及任何需要召集人們朝共同目標努力的領域工作。此外，他們強大的口頭溝通技巧讓他們能夠成為有效的發言人和倡導者，能夠清晰地表達信息並激勵多元化的群體。</li>
           <h3>▪︎ 面臨的挑戰：</h3>
-          <li class="indent">社會型是以幫助他人為中心的角色情感需求量大，如果不進行適當的自我照顧，可能會導致同情疲勞和職業倦怠。社交型的人需要確保保持健康的工作生活平衡，並在需要時尋求支持，以持續他們的關懷能力。</li>
+          <li class="indent">社會型是以幫助他人為中心的角色情感需求量大，如果不進行<span class="highlight-text">適當的自我照顧</span>，可能會導致同情疲勞和職業倦怠。社交型的人需要確保保持健康的工作生活平衡，並在需要時尋求支持，以持續他們的關懷能力。</li>
           <li class="indent">社會型的人可能在高度競爭、官僚主義或以盈利為導向的環境中掙扎，這些環境可能與他們的價值觀不符。他們在以人的福祉而非金錢收益為重的環境中茁壯成長。因此，他們通常需要精挑細選與自己價值觀相契合的雇主。</li>
           <p >內容來源：Meetype.com</p>
         </div>
@@ -375,10 +388,10 @@
           <h3>▪︎ 特質：</h3>
           <li class="indent">藝術型人格以創造力、表達力和偏好原創性任務為顯著特徵。他們有獨特的能力通過不同的視角看世界，將別人眼中平凡或沒注意到的經歷跟經驗表達出來，轉化成有價值的產品。</li>
           <h3>▪︎ 在職場中的優勢：</h3>
-          <li class="indent">藝術型的人天生擅長跳脫傳統思維，帶來新視角。他們看待世界的獨特方式和能力使他們成為任何創意團隊中的關鍵人物，因為原創性和才華是成功的必要條件。</li>
+          <li class="indent">藝術型的人<span class="highlight-text">天生擅長跳脫傳統思維</span>，帶來新視角。他們看待世界的獨特方式和能力使他們成為任何創意團隊中的關鍵人物，因為原創性和才華是成功的必要條件。</li>
           <h3>▪︎ 面臨的挑戰：</h3>
-          <li class="indent">藝術跟設計工作的主觀性及回報的高波動，可能導致工作機會和收入的不穩定，特別是對於自由職業者或個人工作室而言。這類工作也因為有趣自由，所以競爭性非常高，需要不斷自我提升和適應新趨勢才能做的久。</li>
-          <li class="indent">另一個挑戰是主動經營客戶或社群關係，持續自我推廣和建立人脈的需求，對於個性內向或想要專注於創作的人來說，會是艱巨的任務。為了克服這些障礙，藝術型的人需要找出一種平衡，＂他們想做的＂跟＂市場實際需求的＂這兩者之間是否有共通之處，如此一來他們才能得到應有的金錢回報。所以，學習建立人脈、社群、自我推廣跟銷售，是藝術型人將創意才能轉化為長久職業的必要步驟。</li>
+          <li class="indent">藝術跟設計工作的主觀性及回報的高波動，可能導致工作機會和收入的不穩定，特別是對於自由職業者或個人工作室而言。這類工作也因為有趣自由，所以競爭性非常高，需要不斷<span class="highlight-text">自我提升</span>和<span class="highlight-text">適應新趨勢</span>才能做的久。</li>
+          <li class="indent">另一個挑戰是主動經營客戶或社群關係，持續自我推廣和建立人脈的需求，對於個性內向或想要專注於創作的人來說，會是艱巨的任務。為了克服這些障礙，藝術型的人需要找出一種平衡，<span class="highlight-text">＂他們想做的＂跟＂市場實際需求的＂這兩者之間是否有共通之處</span>，如此一來他們才能得到應有的金錢回報。所以，學習建立人脈、社群、自我推廣跟銷售，是藝術型人將創意才能轉化為長久職業的必要步驟。</li>
           <p >內容來源：Meetype.com</p>
         </div>
         <div class="box">
